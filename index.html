@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="祭ばやしのコハク — 夏祭りの夜をめぐる、オリジナルのブラウザーゲーム。">
+  <meta name="google-adsense-account" content="ca-pub-8805410383938800">
+  <title>祭ばやしのコハク — 夏祭りの夜のゲーム</title>
+  <style>
+    :root { color-scheme: dark; --night: #101827; --paper: #f5ead4; --muted: #c7c4bd; --lantern: #f29a57; --line: rgba(245,234,212,.18); }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: var(--paper); background: radial-gradient(ellipse at 50% -14%, #34425c 0, transparent 48%), radial-gradient(circle at 8% 42%, rgba(242,154,87,.08) 0 1px, transparent 2px), radial-gradient(circle at 85% 30%, rgba(245,234,212,.25) 0 1px, transparent 2px), var(--night); font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif; }
+    .shell { width: min(1120px, calc(100% - 36px)); margin: 0 auto; padding: 38px 0 28px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+    .mark { color: var(--lantern); font-family: system-ui, sans-serif; font-size: .73rem; letter-spacing: .24em; text-transform: uppercase; }
+    nav a, footer a { color: var(--paper); text-decoration-color: rgba(245,234,212,.4); text-underline-offset: 4px; }
+    nav a:hover, footer a:hover { color: var(--lantern); }
+    .intro { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding: 42px 0 26px; }
+    h1 { margin: 8px 0 10px; font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 500; letter-spacing: .08em; line-height: 1.2; }
+    .eyebrow { color: var(--lantern); font-size: .86rem; letter-spacing: .18em; }
+    .intro p { max-width: 690px; margin: 0; color: var(--muted); font-family: system-ui, sans-serif; font-size: .98rem; line-height: 1.8; }
+    .controls { border: 1px solid var(--line); border-radius: 99px; padding: 10px 15px; color: var(--muted); font-family: system-ui, sans-serif; font-size: .82rem; white-space: nowrap; }
+    .game-frame { overflow: hidden; border: 1px solid rgba(242,154,87,.45); border-radius: 8px; background: #0b111d; box-shadow: 0 22px 80px rgba(0,0,0,.38), 0 0 36px rgba(242,154,87,.09); }
+    iframe { display: block; width: 100%; height: min(68vw, 650px); min-height: 420px; border: 0; background: #101827; }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 17px; color: var(--muted); font-family: system-ui, sans-serif; font-size: .8rem; }
+    @media (max-width: 700px) { .shell { width: min(100% - 22px, 560px); padding-top: 18px; } header { padding-bottom: 17px; } .intro { grid-template-columns: 1fr; gap: 14px; padding: 28px 0 18px; } .controls { justify-self: start; } iframe { height: 70vh; min-height: 400px; } footer { flex-direction: column; gap: 8px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="mark">Kohaku · Festival Game</div>
+      <nav><a href="privacy.html">プライバシー</a></nav>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="title">
+        <div>
+          <div class="eyebrow">提灯ゆれる、夏祭りの夜</div>
+          <h1 id="title">祭ばやしのコハク</h1>
+          <p>お祭りの夜を舞台にしたオリジナルのブラウザーゲームです。画面をクリックしてゲームを始め、コハクと一緒に祭りの会場を進もう。</p>
+        </div>
+        <div class="controls">操作：キーボード / 画面タッチ</div>
+      </section>
+      <section class="game-frame" aria-label="ゲーム">
+        <iframe src="/godot-festival-game-web/" title="祭ばやしのコハク ゲーム画面" allow="autoplay; fullscreen; gamepad" allowfullscreen></iframe>
+      </section>
+    </main>
+    <footer>
+      <span>個人制作のゲームです。プレイは無料です。</span>
+      <span>広告とデータの取り扱いは<a href="privacy.html">プライバシーについて</a>をご覧ください。</span>
+    </footer>
+  </div>
+</body>
+</html>
